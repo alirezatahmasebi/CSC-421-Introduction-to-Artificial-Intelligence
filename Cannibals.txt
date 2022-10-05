@@ -1,34 +1,34 @@
-Left:BMMMCCC Right:Nothing, Left:MMMCC Right:BC, 1
-Left:MMMCC Right:BC, Left:BMMMCCC Right:Nothing, 1  
-Left:BMMMCCC Right:Nothing, Left:MMCC Right:BMC, 2
-Left:MMCC Right:BMC, Left:BMMMCCC Right:Nothing, 2
-Left:BMMMCCC Right:Nothing, Left:MMMC Right:BCC, 2
-Left:MMMC Right:BCC, Left:BMMMCCC Right:Nothing, 2  
-Left:MMCC Right:BMC, Left:BMMMCC Right:C, 1
-Left:BMMMCC Right:C, Left:MMCC Right:BMC, 1
-Left:MMMC Right:BCC, Left:BMMMCC Right:C, 1 
-Left:BMMMCC Right:C, Left:MMMC Right:BCC, 1 
-Left:BMMMCC Right:C, Left:MMM Right:BCCC, 2 
-Left:MMM Right:BCCC, Left:BMMMCC Right:C, 2 
-Left:MMM Right:BCCC, Left:BMMMC Right:CC, 1
-Left:BMMMC Right:CC, Left:MMM Right:BCCC, 1
-Left:BMMMC Right:CC, Left:MC Right:BMMCC, 2
-Left:MC Right:BMMCC, Left:BMMMC Right:CC, 2
-Left:MC Right:BMMCC, Left:BMMCC Right:MC, 2
-Left:BMMCC Right:MC, Left:MC Right:BMMCC, 2
-Left:BMMCC Right:MC, Left:CC Right:BMMMC, 2
-Left:CC Right:BMMMC, Left:BMMCC Right:MC, 2
-Left:CC Right:BMMMC, Left:BCCC Right:MMM, 1
-Left:BCCC Right:MMM, Left:CC Right:BMMMC, 1
-Left:BCCC Right:MMM, Left:C Right:BMMMCC, 2
-Left:C Right:BMMMCC, Left:BCCC Right:MMM, 2
-Left:C Right:BMMMCC, Left:BCC Right:MMMC, 1
-Left:BCC Right:MMMC, Left:C Right:BMMMCC, 1
-Left:C Right:BMMMCC, Left:BMC Right:MMCC, 1
-Left:BMC Right:MMCC, Left:C Right:BMMMCC, 1
-Left:BCC Right:MMMC, Left:Nothing Right:BMMMCCC, 2
-Left:Nothing Right:BMMMCCC, Left:BCC Right:MMMC, 2
-Left:BMC Right:MMCC, Left:Nothing Right:BMMMCCC, 2
-Left:Nothing Right:BMMMCCC, Left:BMC Right:MMCC, 2
-Left:BC Right:MMMCC, Left:Nothing Right:BMMMCCC, 1
-Left:Nothing Right:BMMMCCC, Left:BC Right:MMMCC, 1
+Left:BMMMCCC-Right:Nothing,Left:MMMCC-Right:BC,1
+Left:MMMCC-Right:BC,Left:BMMMCCC-Right:Nothing,1
+Left:BMMMCCC-Right:Nothing,Left:MMCC-Right:BMC,2
+Left:MMCC-Right:BMC,Left:BMMMCCC-Right:Nothing,2
+Left:BMMMCCC-Right:Nothing,Left:MMMC-Right:BCC,2
+Left:MMMC-Right:BCC,Left:BMMMCCC-Right:Nothing,2
+Left:MMCC-Right:BMC,Left:BMMMCC-Right:C,1
+Left:BMMMCC-Right:C,Left:MMCC-Right:BMC,1
+Left:MMMC-Right:BCC,Left:BMMMCC-Right:C,1
+Left:BMMMCC-Right:C,Left:MMMC-Right:BCC,1
+Left:BMMMCC-Right:C,Left:MMM-Right:BCCC,2
+Left:MMM-Right:BCCC,Left:BMMMCC-Right:C,2
+Left:MMM-Right:BCCC,Left:BMMMC-Right:CC,1
+Left:BMMMC-Right:CC,Left:MMM-Right:BCCC,1
+Left:BMMMC-Right:CC,Left:MC-Right:BMMCC,2
+Left:MC-Right:BMMCC,Left:BMMMC-Right:CC,2
+Left:MC-Right:BMMCC,Left:BMMCC-Right:MC,2
+Left:BMMCC-Right:MC,Left:MC-Right:BMMCC,2
+Left:BMMCC-Right:MC,Left:CC-Right:BMMMC,2
+Left:CC-Right:BMMMC,Left:BMMCC-Right:MC,2
+Left:CC-Right:BMMMC,Left:BCCC-Right:MMM,1
+Left:BCCC-Right:MMM,Left:CC-Right:BMMMC,1
+Left:BCCC-Right:MMM,Left:C-Right:BMMMCC,2
+Left:C-Right:BMMMCC,Left:BCCC-Right:MMM,2
+Left:C-Right:BMMMCC,Left:BCC-Right:MMMC,1
+Left:BCC-Right:MMMC,Left:C-Right:BMMMCC,1
+Left:C-Right:BMMMCC,Left:BMC-Right:MMCC,1
+Left:BMC-Right:MMCC,Left:C-Right:BMMMCC,1
+Left:BCC-Right:MMMC,Left:Nothing-Right:BMMMCCC,2
+Left:Nothing-Right:BMMMCCC,Left:BCC-Right:MMMC,2
+Left:BMC-Right:MMCC,Left:Nothing-Right:BMMMCCC,2
+Left:Nothing-Right:BMMMCCC,Left:BMC-Right:MMCC,2
+Left:BC-Right:MMMCC,Left:Nothing-Right:BMMMCCC,1
+Left:Nothing-Right:BMMMCCC,Left:BC-Right:MMMCC,1
