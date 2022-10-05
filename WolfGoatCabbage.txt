@@ -1,22 +1,22 @@
-Left:PWGC Right:Nothing, Left:WGC Right:P, 1 
-Left:WGC Right:P, Left:PWGC Right:Nothing, 1
-Left:PWGC Right:Nothing, Left:WC Right:PG, 2
-Left:WC Right:PG, Left:PWGC Right:Nothing, 2
-Left:WC Right:PG, Left:PWC Right:G, 1
-Left:PWC Right:G, Left:WC Right:PG, 1
-Left:PWC Right:G, Left:C Right:PWG, 2
-Left:C Right:PWG, Left:PWC Right:G, 2
-Left:PWC Right:G, Left:W Right:PGC, 2
-Left:W Right:PGC, Left:PWC Right:G, 2
-Left:C Right:PWG, Left:PGC Right:W, 2
-Left:PGC Right:W, Left:C Right:PWG, 2
-Left:W Right:PGC, Left:PWG Right:C, 2
-Left:PWG Right:C, Left:W Right:PGC, 2
-Left:PGC Right:W, Left:G Right:PWC, 2
-Left:G Right:PWC, Left:PGC Right:W, 2
-Left:PWG Right:C, Left:G Right:PWC, 2
-Left:G Right:PWC, Left:PWG Right:C, 2
-Left:G Right:PWC, Left:PG Right:WC, 1
-Left:PG Right:WC, Left:G Right:PWC, 1
-Left:PG Right:WC, Left:Nothing Right:PWGC, 2
-Left:Nothing Right:PWGC, Left:PG Right:WC, 2
+Left:PWGC-Right:Nothing,Left:WGC-Right:P,1
+Left:WGC-Right:P,Left:PWGC-Right:Nothing,1
+Left:PWGC-Right:Nothing,Left:WC-Right:PG,2
+Left:WC-Right:PG,Left:PWGC-Right:Nothing,2
+Left:WC-Right:PG,Left:PWC-Right:G,1
+Left:PWC-Right:G,Left:WC-Right:PG,1
+Left:PWC-Right:G,Left:C-Right:PWG,2
+Left:C-Right:PWG,Left:PWC-Right:G,2
+Left:PWC-Right:G,Left:W-Right:PGC,2
+Left:W-Right:PGC,Left:PWC-Right:G,2
+Left:C-Right:PWG,Left:PGC-Right:W,2
+Left:PGC-Right:W,Left:C-Right:PWG,2
+Left:W-Right:PGC,Left:PWG-Right:C,2
+Left:PWG-Right:C,Left:W-Right:PGC,2
+Left:PGC-Right:W,Left:G-Right:PWC,2
+Left:G-Right:PWC,Left:PGC-Right:W,2
+Left:PWG-Right:C,Left:G-Right:PWC,2
+Left:G-Right:PWC,Left:PWG-Right:C,2
+Left:G-Right:PWC,Left:PG-Right:WC,1
+Left:PG-Right:WC,Left:G-Right:PWC,1
+Left:PG-Right:WC,Left:Nothing-Right:PWGC,2
+Left:Nothing-Right:PWGC,Left:PG-Right:WC,2

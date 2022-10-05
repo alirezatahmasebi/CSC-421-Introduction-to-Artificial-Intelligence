@@ -1,7 +1,9 @@
-import java.util.HashSet;
 import java.util.Set;
-/*
-public class ProblemWolfGoatCabbage extends Problem {
-    
+
+public abstract class StateWolfGoatCabbage {
+    public Object initialState;
+    abstract boolean goal_test(Object state);
+    abstract Set<Object> getSuccessors(Object state);
+    abstract double step_cost(Object fromState, Object toState);
+    abstract public double h(Object state); 
 }
-*/
