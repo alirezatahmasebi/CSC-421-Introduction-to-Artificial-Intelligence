@@ -31,41 +31,48 @@ public class ProblemPancakes extends Problem {
         //Random rand = new Random();
         //int sp = rand.nextInt(N); // get a number between 0 and N-1 (position of the spatula)
         //sp += 1; // adjust the number to be between 1 and N (# of pancakes to flip)
-        int sp = (int)Math.floor(Math.random()*(N-1+1)+1);
-        int j = sp - 1;
-        int i = 0;
-        int count = 1;
+        //int sp = (int)Math.floor(Math.random()*(N-1+1)+1);
+        //int j = sp - 1;
+        //int i = 0;
+        //int count = 1;
         //ProblemPancakes.total_cost = ProblemPancakes.total_cost + sp;
-        System.out.println(sp);
+        //System.out.println(sp);
+        //ss = new StatePancakes(s);
         
-        // flipping even # of pancakes 
-        ss = new StatePancakes(s);
-        if(sp % 2 == 0) {
-            while(count <= sp/2){
-                ss.pancakeArray[i] = s.pancakeArray[j];
-                ss.pancakeArray[j] = s.pancakeArray[i];
-                i++;
-                j--;
-                count++;
-            }
-            //System.out.println(ss);
-            set.add(ss);
-        }
-        
-        // flipping odd # of pancakes 
-        ss = new StatePancakes(s);
-        if (sp % 2 != 0){
-            while(count < sp/2){
-                ss.pancakeArray[i] = s.pancakeArray[j];
-                ss.pancakeArray[j] = s.pancakeArray[i];
-                i++;
-                j--;
-                count++;
-            }
-            //System.out.println(ss);
-            set.add(ss);
-        }
+        for (int k = 1; k <= N; k++){
+            // flipping even # of pancakes 
 
+            int j = k - 1;
+            int i = 0;
+            int count = 1;
+            
+            ss = new StatePancakes(s);
+            if(k % 2 == 0) {
+                while(count <= k/2){
+                    ss.pancakeArray[i] = s.pancakeArray[j];
+                    ss.pancakeArray[j] = s.pancakeArray[i];
+                    i++;
+                    j--;
+                    count++;
+                }
+                //System.out.println(ss);
+                set.add(ss);
+            }
+
+            // flipping odd # of pancakes 
+            ss = new StatePancakes(s);
+            if (k % 2 != 0){
+                while(count < k/2 + 1){
+                    ss.pancakeArray[i] = s.pancakeArray[j];
+                    ss.pancakeArray[j] = s.pancakeArray[i];
+                    i++;
+                    j--;
+                    count++;
+                }
+                //System.out.println(ss);
+                set.add(ss);
+            }
+        }
         return set;
     }
 
@@ -75,8 +82,8 @@ public class ProblemPancakes extends Problem {
 
     public static void main(String[] args) throws Exception {
         ProblemPancakes problem = new ProblemPancakes();
-        //int[] pancakeArray = {1, 0, 3, 5, 2, 4};
-        int[] pancakeArray = {1, 0, 3, 2};
+        int[] pancakeArray = {1, 0, 3, 5, 2, 4};
+        //int[] pancakeArray = {1, 0, 3, 2};
         problem.initialState = new StatePancakes(pancakeArray); 
 
         Search search  = new Search(problem);
