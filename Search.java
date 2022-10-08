@@ -78,7 +78,7 @@ public class Search {
     int cnt; //count expansions
     List<Node> node_list; //store all nodes ever generated
     Node initialNode; //initial node based on initial state
-    //
+    
 
     private String TreeSearch(Frontier frontier) {
         cnt = 0; 

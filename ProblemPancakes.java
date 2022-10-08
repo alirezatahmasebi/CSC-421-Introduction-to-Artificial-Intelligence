@@ -3,8 +3,6 @@ import java.util.Set;
 import java.lang.Math;
 
 public class ProblemPancakes extends Problem {
-
-    //public static int total_cost;
     
     boolean goal_test(Object state) {
         StatePancakes pancake_state = (StatePancakes) state;
@@ -28,20 +26,9 @@ public class ProblemPancakes extends Problem {
         StatePancakes ss; //successor state
         
         int N = s.N;
-        //Random rand = new Random();
-        //int sp = rand.nextInt(N); // get a number between 0 and N-1 (position of the spatula)
-        //sp += 1; // adjust the number to be between 1 and N (# of pancakes to flip)
-        //int sp = (int)Math.floor(Math.random()*(N-1+1)+1);
-        //int j = sp - 1;
-        //int i = 0;
-        //int count = 1;
-        //ProblemPancakes.total_cost = ProblemPancakes.total_cost + sp;
-        //System.out.println(sp);
-        //ss = new StatePancakes(s);
         
         for (int k = 1; k <= N; k++){
             // flipping even # of pancakes 
-
             int j = k - 1;
             int i = 0;
             int count = 1;
@@ -55,7 +42,6 @@ public class ProblemPancakes extends Problem {
                     j--;
                     count++;
                 }
-                //System.out.println(ss);
                 set.add(ss);
             }
 
@@ -69,24 +55,38 @@ public class ProblemPancakes extends Problem {
                     j--;
                     count++;
                 }
-                //System.out.println(ss);
                 set.add(ss);
             }
         }
         return set;
     }
 
-    double step_cost(Object fromState, Object toState) { return 1; }
+    double step_cost(Object fromState, Object toState) { 
+        return 1;
+    }
 
-    public double h(Object state) { return 0; }
+    public double h(Object state) { 
+        int num_neighbours_with_gaps = 0;
+        StatePancakes s = (StatePancakes) state;         
+        int N = s.N;
+        int m = 0;
+        int n = 1;
+        for (int k = 0; k < (N-1); k++){
+            if (Math.abs(s.pancakeArray[m] - s.pancakeArray[n]) != 1) {
+                num_neighbours_with_gaps++;
+            }
+            m++;
+            n++;
+        }
+        return num_neighbours_with_gaps; 
+    }
 
     public static void main(String[] args) throws Exception {
         ProblemPancakes problem = new ProblemPancakes();
         int[] pancakeArray = {1, 0, 3, 5, 2, 4};
-        //int[] pancakeArray = {1, 0, 3, 2};
         problem.initialState = new StatePancakes(pancakeArray); 
 
-        Search search  = new Search(problem);
+        Search search = new Search(problem);
 
         System.out.println("TreeSearch------------------------");
         System.out.println("BreadthFirstTreeSearch:\t\t" + search.BreadthFirstTreeSearch());

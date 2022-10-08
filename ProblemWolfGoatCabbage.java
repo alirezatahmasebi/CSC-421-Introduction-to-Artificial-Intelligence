@@ -49,7 +49,18 @@ public class ProblemWolfGoatCabbage extends Problem {
         return map.get(fromState).get(toState);
     }
 
-    public double h(Object state) { return 0; }
+    public double h(Object state) { 
+        int objects_left_side_count = 0;
+        String leftbank = String.valueOf(state);
+        leftbank = leftbank.substring(leftbank.indexOf(":") + 1, leftbank.indexOf("-"));
+        for(int i = 0; i < leftbank.length(); i++) {
+            char o = leftbank.charAt(i);
+            if (o == 'P' || o == 'G' || o == 'W' || o == 'C'){
+                objects_left_side_count++;
+            }
+        }
+        return objects_left_side_count;
+    }
 
     public static void main(String[] args) throws Exception {
         ProblemWolfGoatCabbage problem = new ProblemWolfGoatCabbage("WolfGoatCabbage.txt");
