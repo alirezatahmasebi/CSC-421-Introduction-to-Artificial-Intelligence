@@ -3,8 +3,6 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.Set;
 public class GameNim extends Game{
-	char marks[] = {'O', 'X'}; //'O' for computer, 'X' for human  // dont need?
-	
     int winningState = 0;
 
     int WinningScore = 10;
@@ -17,18 +15,14 @@ public class GameNim extends Game{
     
     public boolean isWinState(State state)
     {
-        StateNim tstate = (StateNim) state;
-        //player who did the last move
-        //int previous_player = (state.player==0 ? 1 : 0);  
-        //char mark = marks[previous_player];
-        
+        StateNim tstate = (StateNim) state;     
             if (tstate.board==winningState) { 
             	return true;
             }
         return false;
     }
     
-    public boolean isStuckState(State state) { // dont need?
+    public boolean isStuckState(State state) {
     
         return false;
     }
@@ -44,14 +38,10 @@ public class GameNim extends Game{
         
         StateNim successor_state;
         
-        /*char mark = 'O';
-        if (tstate.player == 1) //human
-            mark = 'X'; */
-        
         for (int i = 1; i <= 3; i++) {
-            if (tstate.board != 0) {
+            if (tstate.board != winningState && tstate.board - i >= 0) {
                 successor_state = new StateNim(tstate);
-                successor_state.board -= 1;
+                successor_state.board -= i;
                 successor_state.player = (state.player==0 ? 1 : 0); 
                 
                 successors.add(successor_state);
@@ -67,10 +57,10 @@ public class GameNim extends Game{
     		//player who made last move
     		int previous_player = (state.player==0 ? 1 : 0);
     	
-	    	if (previous_player==0) //computer wins
+	    	if (previous_player==0) //Player wins
+	            return LosingScore; 
+	    	else //Computer wins
 	            return WinningScore;
-	    	else //human wins
-	            return LosingScore;
     	}
 
         return NeutralScore;
@@ -81,11 +71,11 @@ public class GameNim extends Game{
         
         Game game = new GameNim(); 
         Search search = new Search(game);
-        int depth = 8;
+        int depth = 13;
         
         //needed to get human's move
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        
+        System.out.println("There are 13 coins");
         while (true) {
         	
         	StateNim 	nextState = null;
@@ -94,13 +84,13 @@ public class GameNim extends Game{
               case 1: //Human
                   
             	  //get human's move
-                  System.out.print("Enter your *valid* move> ");
+                  System.out.print("Enter your *valid* move from 1-3 > ");
                   int val = Integer.parseInt( in.readLine() );
             	  if (val <=3){
                     nextState = new StateNim((StateNim)game.currentState);
                     nextState.player = 1;
                     nextState.board -= val;
-                    System.out.println("Human: \n" + nextState);
+                    System.out.print("Coins remaining after Human's turn: " + nextState);
                     break;
                   }
                   
@@ -108,7 +98,7 @@ public class GameNim extends Game{
             	  
             	  nextState = (StateNim)search.bestSuccessorState(depth);
             	  nextState.player = 0;
-            	  System.out.println("Computer: \n" + nextState);
+            	  System.out.print("Coins remaining after Computer's turn: " + nextState);
                   break;
             }
                         
